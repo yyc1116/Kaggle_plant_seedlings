@@ -1,10 +1,4 @@
 # Plant Seedlings Classification (2018)
-
-[![Python - uv](https://img.shields.io/badge/environment-uv-261230?style=flat&logo=python)](https://github.com/astral-sh/uv)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat&logo=pytorch)](https://pytorch.org/)
-[![Kaggle Score](https://img.shields.io/badge/Kaggle%20Score-0.98614-blue)](https://www.kaggle.com/c/plant-seedlings-classification)
-[![Ranking](https://img.shields.io/badge/Estimated%20Rank-Top%205%25--6%25-brightgreen)](https://www.kaggle.com/c/plant-seedlings-classification)
-
 ## 專案簡介
 
 本專案以 **PyTorch** 解決 Kaggle 於 2018 年舉辦的 [Plant Seedlings Classification](https://www.kaggle.com/c/plant-seedlings-classification) 影像分類競賽（共 12 種植物幼苗類別）。
@@ -30,13 +24,19 @@
 
 ---
 
-## 快速開始 (Quick Start)
+## Quick Start
 
-專案採用 [uv](https://github.com/astral-sh/uv) 進行環境與依賴管理。
+專案使用 [uv](https://github.com/astral-sh/uv) 進行環境管理。
 
-### 1. 環境準備
-```bash
-git clone [https://github.com/yyc1116/Kaggle_plant_seedlings.git](https://github.com/yyc1116/Kaggle_plant_seedlings.git)
-cd Kaggle_plant_seedlings
-uv sync
-```
+### 下載資料集
+
+1. 依照 [Kaggle API 文件](https://www.kaggle.com/docs/api) 完成登入與 API 設定。
+2. 下載競賽資料集：  
+`kaggle competitions download -c plant-seedlings-classification`
+3. 解壓縮資料集：  
+`unzip plant-seedlings-classification.zip -d plant-seedlings-classification`
+
+### 訓練與推論
+
+1. 訓練模型：`uv run train.py`
+2. 產生預測結果：`uv run test.py`
